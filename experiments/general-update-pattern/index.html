@@ -49,11 +49,11 @@
         text.attr("class", "update");
 
         // ENTER
-        // Create new elements as needed.
+        // Добавить новые элементы, если необходимо
         text.enter().append("text")
                 .attr("class", "enter")
                 .attr("x", function(d, i) { return i * 32; })
-                .attr("dy", ".35em");
+                .attr("dy", ".5em");
 
         // ENTER + UPDATE
         // Appending to the enter selection expands the update selection to include
@@ -62,7 +62,7 @@
         text.text(function(d) { return d; });
 
         // EXIT
-        // Remove old elements as needed.
+        // Удалить ненужные (не соответствующие прикреплённые к данным) узлы, если необходимо.
         text.exit().remove();
     }
 
@@ -82,6 +82,7 @@
 //        arr=arr.sort();
 //        console.log(arr);
 
+        // arr - has new data each time
         update(svg,arr);
     }, 5000);
 
