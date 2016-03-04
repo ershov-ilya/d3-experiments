@@ -9,7 +9,11 @@
             fill: steelblue;
         }
 
-        .axis text {
+        .bar:hover {
+            fill: brown;
+        }
+
+        .axis {
             font: 10px sans-serif;
         }
 
@@ -23,7 +27,6 @@
         .x.axis path {
             display: none;
         }
-
     </style>
 </head>
 <body>
@@ -52,7 +55,9 @@
 
     var yAxis = d3.svg.axis()
             .scale(y)
-            .orient("left");
+            .orient("left")
+            .ticks(10, "%")
+            ;
 
     var chart = d3.select(".chart")
             .attr("width", width + margin.left + margin.right)
@@ -87,7 +92,6 @@
                 .attr("y", function(d) { return y(d.value); })
                 .attr("height", function(d) { return height - y(d.value); })
                 .attr("width", x.rangeBand());
-
     });
 
     function type(d) {
