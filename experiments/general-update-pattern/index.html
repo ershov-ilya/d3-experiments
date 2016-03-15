@@ -38,6 +38,26 @@
             .append("g")
             .attr("transform", "translate(32," + (height / 2) + ")");
 
+    // The initial display.
+    update(svg, alphabet);
+
+    // Grab a random sample of letters from the alphabet, in alphabetical order.
+    setInterval(function() {
+        var arr=alphabet;
+
+        arr=d3.shuffle(arr);
+        console.log(arr);
+
+        arr=arr.slice(1, Math.floor(Math.random() * alphabet.length)-1);
+        console.log(arr);
+
+//        arr=arr.sort();
+//        console.log(arr);
+
+        // arr - has new data each time
+        update(svg,arr);
+    }, 5000);
+
     function update(svg, data) {
 
         // DATA JOIN
@@ -66,27 +86,6 @@
         // Удалить ненужные (не соответствующие прикреплённые к данным) узлы, если необходимо.
         text.exit().remove();
     }
-
-    // The initial display.
-    update(svg, alphabet);
-
-    // Grab a random sample of letters from the alphabet, in alphabetical order.
-    setInterval(function() {
-        var arr=alphabet;
-
-        arr=d3.shuffle(arr);
-        console.log(arr);
-
-        arr=arr.slice(1, Math.floor(Math.random() * alphabet.length)-1);
-        console.log(arr);
-
-//        arr=arr.sort();
-//        console.log(arr);
-
-        // arr - has new data each time
-        update(svg,arr);
-    }, 5000);
-
 </script>
 </body>
 </html>
