@@ -22,7 +22,8 @@
 .timer-wrap{min-height: 80px; color:#fff; font-weight: bold; text-shadow: #000 1px 1px}
 
 .bg-image{
-    background: url('../img/kryim.jpg') 50% 50% no-repeat;
+    /*background: url('../img/kryim.jpg') 50% 50% no-repeat;*/
+    background-color: #323232;
     background-size: cover;
 }
 

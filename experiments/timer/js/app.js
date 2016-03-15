@@ -16,12 +16,10 @@ function tick(){
     var today = new Date();
 
     updateTimer('.timer-global .timer', today, '2016-04-30 20:00');
-    updateTimer('.timer-chapter-1 .timer', today, '2016-03-22 23:59');
-    updateTimer('.timer-chapter-2 .timer', today, '2016-03-29 23:59');
-    updateTimer('.timer-chapter-3 .timer', today, '2016-04-05 23:59');
-    updateTimer('.timer-chapter-4 .timer', today, '2016-04-12 23:59');
-    updateTimer('.timer-chapter-5 .timer', today, '2016-04-19 23:59');
-    updateTimer('.timer-chapter-6 .timer', today, '2016-04-26 23:59');
+    updateTimer('.timer-chapter-1 .timer', today, '2016-03-29 23:59');
+    updateTimer('.timer-chapter-2 .timer', today, '2016-04-13 23:59');
+    updateTimer('.timer-chapter-report .timer', today, '2016-04-17 23:59');
+    updateTimer('.timer-chapter-presentation .timer', today, '2016-04-26 23:59');
 }
 
 function updateTimer(selector, today, target){
